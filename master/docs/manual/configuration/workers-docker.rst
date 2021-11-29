@@ -92,7 +92,7 @@ This example is voluntarily simplistic, and should probably not be used in produ
     FROM debian:stable
     RUN apt-get update && apt-get install -y \
        python-dev \
-       python-pip
+       python3-pip
     RUN pip install buildbot-worker
     RUN groupadd -r buildbot && useradd -r -g buildbot buildbot
     RUN mkdir /worker && chown buildbot:buildbot /worker
